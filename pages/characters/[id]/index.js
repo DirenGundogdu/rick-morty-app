@@ -75,7 +75,7 @@ export async function getServerSideProps({query}) {
                 .then(data => eps.push(data.id + ' ' + data.name + ' ' + data.air_date));
                 
               });
-              console.log( eps);
+              console.log( 'episodes' ,eps);
 
               
 
@@ -109,10 +109,10 @@ export async function getServerSideProps({query}) {
                    <h3>Episodes:</h3>
                    <ul>
                    {eps.map(fet => {
-                      const {eks} = eps;
+                      const {eks} = fet;
                       return(
                         <li key={eks}>
-                            {eks}
+                           <p>{eks}</p> 
                         </li>
                       )
                    })}
